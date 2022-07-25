@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        header{
+            margin: 20px 20px 0px 20px;
+            height: 50px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            font-size: 30px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        header>p{
+            margin-right: 20px;
+        }
+        #img{
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 20%;
+            height: 40px;
+        }
+        button{
+            width: 70px;
+            height: 40px;
+            background-color: transparent;
+            color: rgb(223, 104, 104);
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(223, 104, 104);
+            color: aliceblue;
+        }
+        #container{
+            width: 100%;
+            margin-top: 50px;
+            height: 600px;
+        }
+        #container>div{
+            width: 100%;
+            height: 600px;
+         
+            margin: auto;
+          
+        }
+        #container>div>img{
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p><a href="login.html">Login</a></p>
+        <p><a href="signup.html">Signup</a></p>
+        <p><a href="index.html">Home</a></p>
+    </header>
+    <input type="text" placeholder="image_url" id="img">
+    <button onclick="Datainfo()">submit</button>
+    <button onclick="slideShow()">showSlide</button>
+    <button onclick="pause()">Pause</button>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    function Datainfo(){
+        let img_url = document.getElementById("img");
+        let images = JSON.parse(localStorage.getItem("images")) || [];
+        images.push(img_url.value);
+
+        localStorage.setItem("images",JSON.stringify(images));
+        img_url.value = null;
+    }
+    let id;
+    let i=0;
+    let flag = true;
+    function slideShow(){
+        let images = JSON.parse(localStorage.getItem("images"));
+        let container = document.getElementById("container");
+        
+        if(flag===false){
+            console.log("hello");
+            clearInterval(id);   
+        }
+        
+        id = setInterval(function(){
+            flag = false;
+            
+            if(i===images.length){
+                i=0;
+            }
+            let img = document.createElement("img");
+            img.src = images[i];
+            let div = document.createElement("div");
+            div.append(img);
+            container.innerHTML = null;
+            container.append(div);
+            i++;
+
+        },3000)
+        
+    }
+    function pause(){
+        clearInterval(id);
+    }
+</script>

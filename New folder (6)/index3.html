@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>custom Array constructor</h2>
+</body>
+</html>
+<script>
+
+
+    class stack{
+        constructor(){
+            this.length = 0;
+            this.stack = [];
+        }
+        pushh(...arr){
+            arr.forEach((el)=>{
+                let i = this.length;
+                this.stack[i]=el;
+                this.length++;
+            });
+        }
+        pop(){
+            let i = this.length-1;
+            delete this.stack[i];
+            this.stack.length--;
+            this.length--;
+        }
+        
+    }
+    let s1 = new stack()
+    s1.pushh(3,6,4,7,9,1,5,8);
+    s1.pop();
+    console.log("s1:",s1)
+</script>

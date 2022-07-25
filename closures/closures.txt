@@ -1,0 +1,4 @@
+//Closures
+//oninput
+//for search movie use omdb api
+//no matter what,async function function will always return promise.

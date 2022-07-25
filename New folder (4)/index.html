@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar">
+         <div>
+            <p>Ftweb-14</p><span>0</span>            
+        </div>
+        <div>
+            <p>Ftweb-19</p><span>0</span>
+        </div> 
+    </div>
+    <button role="button"> 
+        <a id="letter" href="./dashboard.html">Dashboard</a>
+    </button>
+    <div id="deepin">
+        <h1>Add Student Data</h1>
+        <form id="students_data" onsubmit="storeData(event)">
+            <input type="text" id="name" placeholder="name" />
+            <input type="text" id="course" placeholder="course"/>
+            <input type="number" id="unit" placeholder="unit" />
+            <input type="text" id="image" placeholder="image"/>
+            <input type="number" id="batch" placeholder="Ft-Wed Batch No."/>
+            <input type="submit" />
+        </form>
+    </div>
+</body>
+</html>
+<script src="./scripts/index.js"></script>

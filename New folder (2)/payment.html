@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="pay_img" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" alt="">
+    <!-- <img src="https://i.pinimg.com/originals/90/13/f7/9013f7b5eb6db0f41f4fd51d989491e7.gif" alt=""> -->
+</body>
+<script>
+    function bankserver(){
+        return true //||false;
+    }
+    let payment_promise = new Promise(function(resolve,reject){
+        let pin = bankserver();
+        setTimeout(function(){
+        if(pin){
+            resolve("payment Successful");
+        }else{
+            reject("try Again later.");
+        }
+        },4000)
+        // https://c.tenor.com/g3Io2IRq7ZkAAAAC/fail-failure.gif
+    });
+    let image = document.getElementById("pay_img");
+    //handling th promise
+    // .then , .catch
+    //async , await
+    // .then is used for resolve
+    // payment_promise.then(function(resolve){
+    //     console.log(resolve)
+    //     image.src="https://i.pinimg.com/originals/90/13/f7/9013f7b5eb6db0f41f4fd51d989491e7.gif";
+        
+    // })
+    // // .catch is used for reject
+    // payment_promise.catch(function(rej){
+    //     console.log(rej)
+    //     image.src = "https://cdn.dribbble.com/users/1000837/screenshots/3857924/loader_failed_01.gif";
+    // })
+
+ //another method for promise
+    async function content(){
+        try{
+            let res = await payment_promise;
+            console.log(res);
+            image.src="https://i.pinimg.com/originals/90/13/f7/9013f7b5eb6db0f41f4fd51d989491e7.gif";
+        } catch (err){
+            console.log(err);
+            image.src = "https://cdn.dribbble.com/users/1000837/screenshots/3857924/loader_failed_01.gif";
+        }
+        
+    }
+    content();
+    // console.log(payment_promise)
+
+    //what is callback hell??
+
+    //hello World
+    // hello :- 5 sec // apply anything anything i want
+    // word will print only after hello // you cant't apply anything
+
+</script> 
+</html>
+

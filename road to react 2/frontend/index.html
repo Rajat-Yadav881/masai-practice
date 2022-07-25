@@ -1,0 +1,56 @@
+<!-- 'https://masai-api-mocker.herokuapp.com/auth/register'; -->
+//CRUD operation-->(create|POST request|) (read|GET request|) (update|PUT/PATCH request|) (delete|delete|) 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: flex;
+    }
+    form{
+        width: 10%;
+    }
+    input{
+        margin-top: 5%;
+    }
+</style>
+<body>
+    <h1>Flipkart Inventory System</h1>
+    <div id="container">
+        <div id="register-form">
+            <h1>Register</h1>
+            <form>
+                <input type="text" placeholder="name" id="name" />
+                <input type="text" placeholder="email" id="email" />
+                <input type="text" placeholder="password" id="password" />
+                <input type="text" placeholder="username" id="username" />
+                <input type="text" placeholder="mobile" id="mobile" />
+                <input type="text" placeholder="description" id="description" />
+            </form>
+            <button onclick="Register()">Signup</button>
+        </div>  
+        <div id="login-form">
+            <h1>Login</h1>
+            <form> 
+                <input type="text" placeholder="username" id="login-username" />
+                <input type="text" placeholder="password" id="login-password" />
+            </form>
+
+            <button onclick="Login()">Login</button>
+
+            <form>
+                <input type="text" placeholder="username" id="inLogin">
+            </form>
+            <button onclick="profile()">Check</button>
+        </div>
+    </div>      
+</body>
+</html>
+
+<script src="index.js"></script>
+         

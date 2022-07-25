@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+    <div>
+        <input type="number" id="id" placeholder="id"/>
+        <input type="text" id="name" placeholder="name"/>
+        <input type="number" id="price" placeholder="price"/>
+
+        <button onclick="addProduct()">Add</button>
+    </div>
+    <h1>Delete Product</h1>
+    <div>
+        <input type="number" placeholder="enter id" id="deleteID" />
+        <button onclick="deleteFunc()">Delete</button>
+    </div>
+    <h1>put Product</h1>
+    <div>
+        <input type="number" placeholder="enter id" id="put_id" />
+        <button onclick="updateProduct()">put</button>
+    </div>
+</body>
+</html>
+<script >
+
+    let x = (id)=>{
+
+       return document.getElementById(id).value;
+
+    }
+
+    let addProduct = async()=>{
+        let Product = {
+            id:x("id"),
+            name:x("name"),
+            price:x("price"),
+        };
+
+        Product = JSON.stringify(Product);
+
+        let response = await fetch(`http://127.0.0.1:3000/api/products`,{
+            method:"POST",
+            body:Product,
+            headers:{
+                "Content-Type":"application/json"
+            },
+        });
+
+        console.log("response:",response);
+
+    }
+
+    let deleteFunc = async()=>{
+
+        let id = x("deleteID");
+
+        let response = await fetch(`http://127.0.0.1:3000/api/products/${id}`,{
+            method:"DELETE",
+            headers:{
+                "Content-Type":"application/json"
+            },
+        });
+        let data = await response.json();
+        console.log("data:",data);
+
+    }
+    let updateProduct = async()=>{
+        let id = x("put_id");
+
+        let response = await fetch(`http://127.0.0.1:3000/api/products/${id}`,{
+
+            method:"PATCH",
+
+            body:JSON.stringify({
+                name:"dhoni",
+                // price:80000000,
+
+            }),
+
+            headers:{
+                "Content-T ype":"application/json",
+            }
+        });
+
+        let data = await response.json();
+    }
+</script>

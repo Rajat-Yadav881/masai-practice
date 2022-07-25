@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "name": "instagram",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

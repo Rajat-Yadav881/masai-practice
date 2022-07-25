@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(169, 171, 172);
+        }
+        div{
+            background-color: white;
+            width: 50%;
+            margin: auto;
+            padding: 10%;
+        }
+        input,button{
+            width: 100%;
+            font-size:20px ;
+            display: block;
+            margin-top: 5px;
+        }
+  
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        header{
+            
+            height: 50px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            font-size: 30px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        header>p{
+            margin-right: 20px;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <header>
+        <p><a href="login.html">Login</a></p>
+        <p><a href="signup.html">Signup</a></p>
+        <p><a href="index.html">Home</a></p>
+    </header>
+    <div>
+        <form onsubmit="">
+            <input id="name" placeholder="name" type="text">
+            <input id="email" placeholder="E-mail" type="email">
+            <input id="password" placeholder="Password" type="password">
+            <button id="button">signup</button>
+        </form>
+    </div>
+</body>
+<script>
+
+    let form = document.querySelector("form");
+    userData = JSON.parse(localStorage.getItem("userData")) || [];
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        let data={
+            name:form.name.value,
+            email:form.email.value,
+            password:form.password.value,
+        }
+        if(checkEmail(data.email)===true){
+            userData.push(data);
+            localStorage.setItem("userData",JSON.stringify(userData));
+            window.location.href="login.html";
+        }else{
+            alert("Account Alredy exist"); 
+        }
+    }) 
+    function checkEmail(email){
+        userData = JSON.parse(localStorage.getItem("userData"))
+        let filtred = userData.filter(function(element){
+            return email === element.email;
+            alert("account created")
+        })
+        if(filtred.length>0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
+</html>

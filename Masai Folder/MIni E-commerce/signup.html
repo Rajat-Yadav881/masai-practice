@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(169, 171, 172);
+        }
+        div{
+            background-color: white;
+            width: 50%;
+            margin: auto;
+            padding: 10%;
+        }
+        input,button{
+            width: 100%;
+            font-size:20px ;
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <input id="name" placeholder="name" type="text">
+            <input id="email" placeholder="E-mail" type="email">
+            <input id="password" placeholder="Password" type="password">
+            <button id="button">signup</button>
+        </form>
+    </div>
+</body>
+<script>
+    let form = document.querySelector("form");
+    userData = JSON.parse(localStorage.getItem("userData")) || [];
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        let data={
+            name:form.name.value,
+            email:form.email.value,
+            password:form.password.value,
+        }
+        if(checkEmail(data.email)===true){
+            userData.push(data);
+            localStorage.setItem("userData",JSON.stringify(userData));
+            window.location.href="navbar.html";
+        }else{
+            alert("Account Alredy exist"); 
+        }
+    }) 
+    function checkEmail(email){
+        let filtred = userData.filter(function(element){
+            return email === element.email;
+            alert("account created")
+        })
+        if(filtred.length>0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
+</html>

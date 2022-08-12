@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2eded;
+}
+.main{
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.main>div{
+    border: 2px solid mediumspringgreen;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+#winner{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#winner:hover{
+    background-color: rgb(193, 190, 190);
+    color: red;
+}

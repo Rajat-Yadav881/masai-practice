@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+</head>
+<body>    
+        <div id="container">
+            <form>
+                <div>
+                    <input id="aa" type="number" placeholder="Enter Card Number">
+                </div>
+                <div>
+                    <input id="bb" type="number" placeholder="Enter CVV">
+                </div>
+                <div>
+                    <input id="cc" type="date" placeholder="Enter Expiry Date">
+                </div>
+                <div>
+                    <input id="dd" type="text" placeholder="Enter Name">
+                </div>
+                <input  type="submit">
+            </form>
+        </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",infoFunc);
+    let newArr = JSON.parse(localStorage.getItem("inkey")) || [];
+    function infoFunc(event){
+        event.preventDefault();
+        let obj = {
+            cardNumber:document.getElementById("aa").value,
+            CVV:document.getElementById("bb").value,
+            Date:document.getElementById("cc").value,
+            name:document.getElementById("dd").value,
+        }
+        if(checkPayment(obj.CVV,obj.cardNumber)===true){
+            
+            alert("Payment Successful");
+            localStorage.setItem("inkey",JSON.parse(obj));
+
+        }else{
+            alert("wrong data")
+        }           
+    }
+    function checkPayment(CVV,cardNumber){
+        let Filter = newArr.filter(function(elem){
+            return "1242"===CVV && "123456789"===cardNumber;
+        })
+
+        if(Filter.length>0){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+</script>

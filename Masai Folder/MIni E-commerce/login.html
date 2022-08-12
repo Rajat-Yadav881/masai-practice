@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(169, 171, 172);
+        }
+        div{
+            background-color: white;
+            width: 50%;
+            margin: auto;
+            padding: 10%;
+        }
+        input,button{
+            width: 100%;
+            font-size:20px ;
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            
+            <input id="email" placeholder="E-mail" type="email">
+            <input id="password" placeholder="Password" type="password">
+            <button id="button">Login</button>
+        </form>
+    </div>
+</body>
+<script>
+    let form = document.querySelector("form")
+    userData = JSON.parse(localStorage.getItem("userData")) || [];
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        let data={
+            email:form.email.value,
+            password:form.password.value,
+        }
+        if(checkSignin(data.email,data.password)===true){
+           localStorage.setItem("signin",JSON.stringify(data));
+           alert("Sign in Successful");
+           window.location.href="navbar.html"
+        //    this is for moving to next window or page
+        }else{
+            alert("wrong Username or Password");
+        }
+    })
+    function checkSignin(email,password){
+        let filter = userData.filter(function(element){
+            return element.email===email && element.password === password;
+        })
+        if(filter.length>0){
+            return true
+        }else{
+            return false
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+        }
+        #main{
+            width: 70%;
+
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+        #main>div{
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            text-align: center;           
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="favnav">
+        <ul>
+            <li>main</li>
+            <li>floor</li>
+            <li>cross</li>           
+        </ul>
+    </div>
+    <div id="main"></div>
+</body>
+<script>
+    let obj = [{img:"https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mac-studio-select-202203?wid=446&hei=410&fmt=jpeg&qlt=95&.v=1645739294025",
+                name:"mackbook"},
+                {img:"https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mac-studio-select-202203?wid=446&hei=410&fmt=jpeg&qlt=95&.v=1645739294025",
+                name:"mackbook"},
+                {img:"https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mac-studio-select-202203?wid=446&hei=410&fmt=jpeg&qlt=95&.v=1645739294025",
+                name:"mackbook"},
+                {img:"https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mac-studio-select-202203?wid=446&hei=410&fmt=jpeg&qlt=95&.v=1645739294025",
+                name:"mackbook"},
+                {img:"https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mac-studio-select-202203?wid=446&hei=410&fmt=jpeg&qlt=95&.v=1645739294025",
+                name:"mackbook"},
+                {img:"https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mac-studio-select-202203?wid=446&hei=410&fmt=jpeg&qlt=95&.v=1645739294025",
+                name:"mackbook"},
+                ]
+    obj.forEach(function(elem){
+        let pro = document.createElement("div");
+        let image = document.createElement("img");
+        image.src = elem.img;
+        let text = document.createElement("h2")
+        text.innerText = elem.name;
+        pro.append(image,text);
+        document.querySelector("#main").append(pro);
+    })            
+</script>
+</html>

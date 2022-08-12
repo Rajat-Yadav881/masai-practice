@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#navbar{
+    border: 1px solid red;
+}
+input{
+    width: 505px;
+    font-size: 30px;
+
+}
+#flux{
+    border: 2px solid rebeccapurple;
+    height: 200px;
+    width: 505px;
+    overflow: scroll;
+    position: absolute;
+    background-color: aliceblue;
+   
+}

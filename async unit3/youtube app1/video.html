@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/video.css">
+    <title>Playlist</title>
+  </head>
+  <body onload="play()">
+    <div class="inner">
+    <iframe
+      width="560"
+      height="315"
+      id="vdo"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+</div>
+  </body>
+</html>
+<!-- src= -->
+<script>
+    let play = ()=>{
+        let videO = JSON.parse(localStorage.getItem("video"));
+        let id = videO.id.videoId;
+        let play_video = document.getElementById("vdo");
+        play_video.src = `https://www.youtube.com/embed/${id}`
+
+    };
+    
+
+</script>

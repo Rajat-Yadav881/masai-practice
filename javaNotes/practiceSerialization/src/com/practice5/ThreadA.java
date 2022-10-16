@@ -10,5 +10,6 @@ public class ThreadA extends Thread{
 	@Override
 	public void run() {
 	a1.funA(b1);
+	b1.fun2();
 	}
 }

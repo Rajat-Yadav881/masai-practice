@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c42a5e21-2f37-4e20-9079-3afe8eecc541" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../stringMethods/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/AbstractMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/BeanJava.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/Dzz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/Math.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/Movie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/Myclass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/Office.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/Simple.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/TwoStringMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/_1MethodDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/_1PridctTheOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/_6polymorphism.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/_7userDefinedObjectAsMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/_8constructor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/out/production/stringMethods/StringMethods/_9WeProblem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/src/StringMethods/AbstractMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/src/StringMethods/BeanJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/src/StringMethods/TwoStringMethods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/src/StringMethods/_1MethodDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/src/StringMethods/_1PridctTheOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/src/StringMethods/_6polymorphism.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/src/StringMethods/_7userDefinedObjectAsMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/src/StringMethods/_8constructor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/src/StringMethods/_9WeProblem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stringMethods/stringMethods.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2FhebrPs417Ku4hhLzp6s1VjRsN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/yraja/OneDrive/Desktop/MiniProjects/SmartCity"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c42a5e21-2f37-4e20-9079-3afe8eecc541" name="Changes" comment="" />
+      <created>1664948820599</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664948820599</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

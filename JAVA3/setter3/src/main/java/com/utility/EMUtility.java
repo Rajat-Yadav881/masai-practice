@@ -6,11 +6,11 @@ import javax.persistence.Persistence;
 
 public class EMUtility {
     private static EntityManagerFactory emf;
-    static {
-        emf = Persistence.createEntityManagerFactory("accountUnit");
+    static{
+        emf= Persistence.createEntityManagerFactory("account-Unit");
     }
     public static EntityManager provideEntityManager(){
-       return emf.createEntityManager();
 
+        return emf.createEntityManager();
     }
 }

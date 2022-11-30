@@ -7,8 +7,18 @@ import com.utility.EMUtility;
 import javax.persistence.EntityManager;
 
 public class InsertDetail {
-    EntityManager em = EMUtility.provideEntityManager();
+    public static void main(String[] args) {
+        EntityManager em = EMUtility.provideEntityManager();
 
-    FullTimeInstructor instructor = new FullTimeInstructor("A",688787,"tyu@gmail.com");
-    PartTimeInstructor
+        FullTimeInstructor instructor = new FullTimeInstructor("A",688787,"tyu@gmail.com");
+        PartTimeInstructor instructor1 = new PartTimeInstructor("Manish",3,5600,"465434");
+
+        em.getTransaction().begin();
+
+        em.getTransaction().commit();
+        
+    }
+
+
+
 }

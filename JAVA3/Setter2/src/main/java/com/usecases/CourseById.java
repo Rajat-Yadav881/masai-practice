@@ -2,6 +2,7 @@ package com.usecases;
 
 import com.Dao.CourseDao;
 import com.Dao.CourseDaoImpl;
+import com.exception.CourseNotFoundException;
 
 import java.util.Scanner;
 
@@ -12,5 +13,10 @@ public class CourseById {
         int id = sc.nextInt();
 
         CourseDao dao = new CourseDaoImpl();
+        try {
+            dao.getCourse(id);
+        } catch (CourseNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

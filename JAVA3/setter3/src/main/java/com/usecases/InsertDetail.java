@@ -14,9 +14,10 @@ public class InsertDetail {
         PartTimeInstructor instructor1 = new PartTimeInstructor("Manish",3,5600,"465434");
 
         em.getTransaction().begin();
-
+        em.persist(instructor);
+        em.persist(instructor1);
         em.getTransaction().commit();
-        
+        em.close();
     }
 
 

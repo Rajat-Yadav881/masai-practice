@@ -5,8 +5,8 @@ public class PartTimeInstructor extends Instructor{
     private double costPerSession;
     private String mobileNumber;
 
-    public PartTimeInstructor(String instructorName) {
-        super(instructorName);
+    public PartTimeInstructor() {
+        super();
     }
 
     public PartTimeInstructor(String instructorName, int noOfSession, double costPerSession, String mobileNumber) {
@@ -16,14 +16,9 @@ public class PartTimeInstructor extends Instructor{
         this.mobileNumber = mobileNumber;
     }
 
-    public PartTimeInstructor(int noOfSession, double costPerSession, String mobileNumber) {
-        this.noOfSession = noOfSession;
-        this.costPerSession = costPerSession;
-        this.mobileNumber = mobileNumber;
-    }
 
-    public PartTimeInstructor() {
-    }
+
+
 
     public int getNoOfSession() {
         return noOfSession;

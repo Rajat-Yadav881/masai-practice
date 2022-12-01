@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <bean id="helloWorld" class="com.masai.Demo.HelloWorld" >-->
+<!--&lt;!&ndash;&lt;!&ndash;        <property name="message" value="Hello World! India  Hello Rajat! American"/>&ndash;&gt; //setter injection&ndash;&gt;-->
+<!--&lt;!&ndash;        <constructor-arg value="Hello World! India Hello Rajat! American"/> //constructor injection&ndash;&gt;-->
+<!--        <constructor-arg value="Hello World! India Hello Rajat! American"/>-->
+<!--    </bean>-->
+    <bean id="department2" class="com.masai.Demo.autowired.Department" init-method="init" destroy-method="init" >
+        <property name="deptName" value="CSE"/>
+    </bean>
+    <bean id="employee" class="com.masai.Demo.autowired.Employee" autowire="byType">
+    </bean>
+
+<!--    <bean id="helloWorld" class="com.masai.Demo.HelloWorld">-->
+<!--        <property name="message">-->
+<!--&lt;!&ndash;            <set>&ndash;&gt;-->
+<!--&lt;!&ndash;                <value>Shubhendu</value>&ndash;&gt;-->
+<!--&lt;!&ndash;                <value>Riyas</value>&ndash;&gt;-->
+<!--&lt;!&ndash;                <value>Deepak</value>&ndash;&gt;-->
+<!--&lt;!&ndash;                <value>Sarthak</value>&ndash;&gt;-->
+<!--&lt;!&ndash;            </set>&ndash;&gt;-->
+
+<!--        </property>-->
+<!--    </bean>-->
+
+</beans>

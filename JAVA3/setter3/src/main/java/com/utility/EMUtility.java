@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 public class EMUtility {
     private static EntityManagerFactory emf;
     static{
-        emf= Persistence.createEntityManagerFactory("account-Unit");
+        emf= Persistence.createEntityManagerFactory("accountUnit");
     }
     public static EntityManager provideEntityManager(){
 

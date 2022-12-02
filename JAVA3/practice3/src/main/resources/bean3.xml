@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+   <bean id="aid" class="com.masai2.A">
+       <property name="properties">
+           <props>
+               <prop key="Raj">Delhi</prop>
+               <prop key="Sunil">mumbai</prop>
+               <prop key="Vikash">chennai</prop>
+               <prop key="anil">Kolkata</prop>
+           </props>
+       </property>
+   </bean>
+</beans>

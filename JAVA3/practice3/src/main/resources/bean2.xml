@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="s1" class="com.masai1.Student">
+        <constructor-arg name="roll" value="100" />
+        <constructor-arg name="name" value="Ram" />
+        <constructor-arg name="marks" value="780" />
+    </bean>
+    <bean id="s2" class="com.masai1.Student">
+        <constructor-arg name="roll" value="101" />
+        <constructor-arg name="name" value="Ramesh" />
+        <constructor-arg name="marks" value="680" />
+    </bean>
+    <bean id="s3" class="com.masai1.Student">
+        <constructor-arg name="roll" value="102" />
+        <constructor-arg name="name" value="Sunil" />
+        <constructor-arg name="marks" value="880" />
+    </bean>
+    <bean id="aid" class="com.masai1.A">
+        <property name="map">
+            <map>
+                <entry key-ref="s1" value="NIT"/>
+                <entry key-ref="s2" value="IIT"/>
+                <entry key-ref="s3" value="MNIT"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>

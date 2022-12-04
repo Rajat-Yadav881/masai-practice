@@ -1,0 +1,68 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- For department details -->
+    <bean id="dept1" class="com.spring.entities.Department" >
+        <constructor-arg name="deptId" value="1"/>
+        <constructor-arg name="deptName" value="Sales"/>
+        <constructor-arg name="location" value="Lucknow"/>
+    </bean>
+    <bean id="dept2" class="com.spring.entities.Department" >
+        <constructor-arg name="deptId" value="2"/>
+        <constructor-arg name="deptName" value="Marketing"/>
+        <constructor-arg name="location" value="Kanpur"/>
+    </bean>
+    <bean id="dept3" class="com.spring.entities.Department" >
+        <constructor-arg name="deptId" value="3"/>
+        <constructor-arg name="deptName" value="Accounts"/>
+        <constructor-arg name="location" value="Noida"/>
+    </bean>
+
+    <!-- For employee details -->
+    <bean id="emp1" class="com.spring.entities.Employee">
+        <constructor-arg name="empId" value="10"/>
+        <constructor-arg name="empName" value="Naman"/>
+        <constructor-arg name="address" value="Delhi"/>
+        <constructor-arg name="salary" value="45000"/>
+    </bean>
+    <bean id="emp2" class="com.spring.entities.Employee">
+        <constructor-arg name="empId" value="19"/>
+        <constructor-arg name="empName" value="Kaushik"/>
+        <constructor-arg name="address" value="Hardoi"/>
+        <constructor-arg name="salary" value="88000"/>
+    </bean>
+    <bean id="emp3" class="com.spring.entities.Employee">
+        <constructor-arg name="empId" value="14"/>
+        <constructor-arg name="empName" value="Prashant"/>
+        <constructor-arg name="address" value="Gurgaon"/>
+        <constructor-arg name="salary" value="47000"/>
+    </bean>
+
+
+    <!-- For demo having Map -->
+    <bean id="demo" class="com.spring.entities.Demo" init-method="myInit" destroy-method="cleanUp" lazy-init="true">
+
+        <property name="theMap">
+            <map>
+                <entry key-ref="dept1" value-ref="emp1"/>
+                <entry key-ref="dept2" value-ref="emp2"/>
+                <entry key-ref="dept3" value-ref="emp3"/>
+            </map>
+        </property>
+
+    </bean>
+
+
+</beans>
+
+        <!--[] Points to remember-->
+
+        <!--For autowire bean id should be of same name to bean class-->
+        <!--In init-method= "" we have to provide the correct method name  <bean id= "" init-method="" ></bean>  -->
+        <!--If we want to run a method after bean is closed then use destroy-method= "" ,<bean id= "" destroy-method="" ></bean>-->
+        <!--scope = "Singlenton" (default).It creates only one object -->
+        <!--scope="Prototype" creates new object everytime and store it into spring container . used inside <bean scope=""></bean>-->

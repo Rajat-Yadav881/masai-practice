@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.masai.model.Student;
+import com.masai.model.StudentDTO;
 import com.masai.service.StudentService;
 
 @RestController
@@ -74,11 +76,47 @@ public class StudentController {
 		
 	}
 	
+	@PutMapping("/students/{roll}")
+	public ResponseEntity<Student> updateStudentMarksByRollHandler(@PathVariable("roll") Integer roll,@RequestParam("gMarks") Integer gMarks){
+		//localhost:8088/students/1?gmarks=80  --> due to @RequestParam
+		Student updateStudentByRoll = sService.updateStudentMarks(roll, gMarks);
+		
+		return new ResponseEntity<Student>(updateStudentByRoll,HttpStatus.ACCEPTED);
+	}
 	
+	@GetMapping("/getstudents/{address}")
+	public ResponseEntity<List<Student>> getStudentsByAddressHandler(@PathVariable("address") String address){
+		List<Student> list= sService.getStudentByAddress(address);
+		
+		return new ResponseEntity<List<Student>>(list,HttpStatus.OK);
+	}
 	
+	@GetMapping("/getstudentbymarks/{marks}")
+	public ResponseEntity<Student> getStudentByMarks(@PathVariable("marks") Integer marks){
+		
+		Student student = sService.getStudentByMarks(marks);
+		
+		return new ResponseEntity<Student>(student,HttpStatus.OK);
+	}
 	
+	@GetMapping("/getnamebyroll/{roll}")
+	public ResponseEntity<String> getStudentNameByRollHandler(@PathVariable("roll")Integer roll){
+		String name = sService.getStudentNameByRoll(roll);
+		
+		return new ResponseEntity<String>(name,HttpStatus.OK);
+	}
+	@GetMapping("/getnameMarksByAddress/{address}")
+	public ResponseEntity<List<String>> getStudentNameMarksByAddressHandler(@PathVariable("address")String address){
+		 List<String> list = sService.getStudentNameandMarksByAddress(address);
+		
+		return new ResponseEntity<List<String>>(list,HttpStatus.OK);
+	}
 	
-	
-	
+	@GetMapping("/getDTOnameMarksByAddress/{address}")
+	public ResponseEntity<List<StudentDTO>> getStudentNameMarksByAddressHandler2(@PathVariable("address")String address){
+		 List<StudentDTO> dtos = sService.getStudentNameandMarksByAddress2(address);
+		
+		return new ResponseEntity<List<StudentDTO>>(dtos,HttpStatus.OK);
+	}
 	
 }

@@ -82,9 +82,16 @@ public class CustomerController {
 		return new ResponseEntity<List<CustomerDTO>>(Dto,HttpStatus.OK);
 	}
 	
-	@GetMapping("/loginCustomer")
+	@PostMapping("/loginCustomer")
 	public ResponseEntity<Customer> CustomerLoginHandler(@Valid @RequestParam String email,@Valid @RequestParam String password)throws CustomerException{
 		Customer Dto = cus.loginCustomer(email,password);
+		
+		return new ResponseEntity<Customer>(Dto,HttpStatus.OK);
+	}
+	
+	@PostMapping("/updateCustomerPassword")
+	public ResponseEntity<Customer> updatePasswordHandler(@Valid @RequestParam String username,@Valid @RequestParam String oldPassword,@Valid @RequestParam String newPassword)throws CustomerException{
+		Customer Dto = cus.updateCustomerPassword(username, oldPassword, newPassword);
 		
 		return new ResponseEntity<Customer>(Dto,HttpStatus.OK);
 	}

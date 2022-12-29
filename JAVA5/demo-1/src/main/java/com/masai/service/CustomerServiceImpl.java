@@ -64,8 +64,21 @@ public class CustomerServiceImpl implements CustomerService{
 
 	@Override
 	public Customer updateCustomerPassword(String username, String oldPassword, String newPassword)throws CustomerException {
-		// TODO Auto-generated method stub
-		return null;
+		
+		for(Customer c : listOfCustomer) {
+			if(c.getCustomerName().equals(username)&& c.getPassword().equals(oldPassword)) {
+				Optional<Customer> customer = dao.findById(c.getCustomerId());
+				if(customer.isPresent()) {
+					Customer customer2 = new Customer();
+					customer2.setPassword(newPassword);
+					return customer2;
+				}else {
+					throw new CustomerException("no valid object is available");
+				}
+				
+			}
+		}
+		throw new CustomerException("invalid username and password");
 	}
 
 	@Override

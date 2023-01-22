@@ -12,4 +12,3 @@ public class Demo1 {
         em.close();
     }
 }
- 

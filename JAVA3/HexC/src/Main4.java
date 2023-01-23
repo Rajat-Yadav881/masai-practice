@@ -1,22 +1,22 @@
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+//import java.util.stream.Collectors;
 
 class Main4 {
 	public static void main(String[] args) {
-		int[] array = new int[]{0,1,2,2,3,0,4,2};
-		int val = 2;
+		int[] array = new int[]{-1,0,1,2,-1,-4};
+		
 		Main4 m = new Main4();
-		m.removeElement(array,val);
+		m.threeSum(array);
 	}
-    public void removeElement(int[] nums, int val) {
-        int k = 0;
-        System.out.println(Arrays.toString(nums));
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]!=val){
-                nums[k] = nums[i];
-                k++;
-            }
+    
+    public void threeSum(int[] array) {
+        Set<Integer> set = new HashSet<>();
+        for (Integer t : array) {
+            set.add(t);
         }
-       System.out.println(Arrays.toString(nums));
+        System.out.println(set);
     }
 
 }

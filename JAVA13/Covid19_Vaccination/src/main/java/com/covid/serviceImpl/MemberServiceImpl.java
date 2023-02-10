@@ -31,7 +31,7 @@ public class MemberServiceImpl implements MemberService{
 		Optional<Member> member = memberDao.findById(member_Id);
 		if(member.isPresent()) {
 			Member member1= member.get();
-			memberDao.save(member1);
+			
 			return member1;
 		}else {
 			throw new MemberException("member Not Found...");
@@ -44,6 +44,11 @@ public class MemberServiceImpl implements MemberService{
 		
 		if(card.isPresent()) {
 			Optional<Member> member = Optional.ofNullable(memberDao.findByCard(card));
+			if(member.isPresent()) {
+				Member member1= member.get();
+				
+				return member1;
+			}
 		}
 		
 		

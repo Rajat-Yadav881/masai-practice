@@ -17,6 +17,6 @@ public class Nine extends Eight{
 	
 	public static void main(String[] args) {
 		Eight eight = new Nine("rajat", 34, "delhi","343535");
-		eight.displayNine();
+		
 	}
 }

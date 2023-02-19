@@ -2,9 +2,11 @@ package com.students.serviceImpl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.students.model.Student;
 import com.students.service.StudentSemesterService;
-
+@Service
 public class StudentSemesterImpl implements StudentSemesterService{
 
 	@Override

@@ -3,6 +3,8 @@ import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 //import jakarta.persistence.CascadeType;
 //import jakarta.persistence.Entity;
@@ -26,9 +28,14 @@ import lombok.Setter;
 public class Student {
 	
 	@Id
+	private String id;
+	@Field(type = FieldType.Text,name="name")
 	private String name;
+	@Field(type=FieldType.Text,name="email")
 	private String email;
+	@Field(type=FieldType.Text,name="phone")
 	private String phone;
+	@Field(type=FieldType.Text,name="address")
 	private String address;
 	private List<Semester> semesters;
 }

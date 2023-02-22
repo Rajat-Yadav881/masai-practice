@@ -14,5 +14,6 @@ public class PivotIndex {
 		while(left<right && i>=left && i<right) {
 			
 		}
+		return 1;
     }
 }

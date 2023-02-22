@@ -266,3 +266,5 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact commons-codec
 2023-02-22 04:08:59,968 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yraja\Downloads\java-maven (1)\java-maven-starter-kit\src\test\resources
 2023-02-22 04:09:13,949 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-02-22 04:09:13,949 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yraja\Downloads\java-maven (1)\java-maven-starter-kit\src\main\resources
+2023-02-22 04:09:13,952 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-22 04:09:13,952 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yraja\Downloads\java-maven (1)\java-maven-starter-kit\src\test\resources

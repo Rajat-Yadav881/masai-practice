@@ -663,3 +663,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact commons-codec
 2023-03-02 22:25:22,128 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yraja\Downloads\java-maven (1)\java-maven-starter-kit\src\main\resources
 2023-03-02 22:25:22,131 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-03-02 22:25:22,131 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yraja\Downloads\java-maven (1)\java-maven-starter-kit\src\test\resources
+2023-03-03 12:46:50,335 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

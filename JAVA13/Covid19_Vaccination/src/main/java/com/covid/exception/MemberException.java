@@ -1,7 +1,7 @@
 package com.covid.exception;
 
 public class MemberException extends Exception{
-
+	private String Security;
 	public MemberException() {
 		super();
 		// TODO Auto-generated constructor stub

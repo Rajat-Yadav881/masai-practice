@@ -4,12 +4,12 @@ import java.util.stream.*;
 import com.practice.Student;
 public class Main {
 	public static void main(String[] args) {
-//		List<Student> students = new LinkedList<>();
-//		students.add(new Student(10, "n1", 780));
-//		students.add(new Student(8, "n5", 680));
-//		students.add(new Student(12, "n3", 480));
-//		students.add(new Student(14, "n2", 880));
-//		students.add(new Student(6, "n4", 580));
+		List<Student> students = new LinkedList<>();
+		students.add(new Student(10, "n1", 780));
+		students.add(new Student(8, "n5", 680));
+		students.add(new Student(12, "n3", 480));
+		students.add(new Student(14, "n2", 880));
+		students.add(new Student(6, "n4", 580));
 		
 //		students.stream().forEach(s -> System.out.println(s.getMarks()));
 		

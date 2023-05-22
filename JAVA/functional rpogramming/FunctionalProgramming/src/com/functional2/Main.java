@@ -20,12 +20,12 @@ public class Main {
 //			.filter(s -> s.getMarks()>400)
 //			.forEach(s -> System.out.println(s.getName()));
 		
-//		ArrayList<String> al = new ArrayList<String>();
-//		al.add("ramesh");
-//		al.add("suresh");
-//		al.add("mukesh");
-//		al.add("ajay");
-//		Stream<String> ss=al.stream();
+		ArrayList<String> al = new ArrayList<String>();
+		al.add("ramesh");
+		al.add("suresh");
+		al.add("mukesh");
+		al.add("ajay");
+		Stream<String> ss=al.stream();
 //		
 //		List list = ss.map(s -> "Welcome "+s).collect(Collectors.toList());
 //		list.stream().forEach(s -> System.out.println(s));

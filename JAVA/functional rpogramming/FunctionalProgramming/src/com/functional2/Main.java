@@ -29,11 +29,11 @@ public class Main {
 //		
 //		List list = ss.map(s -> "Welcome "+s).collect(Collectors.toList());
 //		list.stream().forEach(s -> System.out.println(s));
-//		
-//		List<String> citiesL = Arrays.asList("delhi","mumbai","chennai","kolkata");
-//		List<String> citiesU = citiesL.stream().map(city -> city.toUpperCase()).collect(Collectors.toList());
-//		System.out.println(citiesL);
-//		System.out.println(citiesU);
+		
+		List<String> citiesL = Arrays.asList("delhi","mumbai","chennai","kolkata");
+		List<String> citiesU = citiesL.stream().map(city -> city.toUpperCase()).collect(Collectors.toList());
+		System.out.println(citiesL);
+		System.out.println(citiesU);
 		
 		ArrayList<Student> al = new ArrayList<Student>();
 		
